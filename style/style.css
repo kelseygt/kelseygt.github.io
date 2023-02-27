@@ -529,3 +529,39 @@ cv-p {
 }
 
 /* END: Resume style */
+
+/* START: Contact page style */
+
+.fa {
+  padding: 25px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-github {
+  background: #333;
+  color: white;
+}
+
+.fa-envelope {
+  background: #535474;
+  color: white;
+}
+
+.fa-linkedin-in {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-chart-simple {
+  background: #B25068;
+  color: white;
+}
+
+/* END: Contact page style */
