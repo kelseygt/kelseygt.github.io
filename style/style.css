@@ -5,6 +5,7 @@ html, body{
   background-image: url('/images/smoky_mountains_2k.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   width: 100%;
   height: 100%;
   margin: auto;
