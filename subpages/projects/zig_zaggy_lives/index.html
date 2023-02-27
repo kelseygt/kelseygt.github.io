@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>The Lives of Students</title>
+  <link rel="stylesheet" href="./style/style.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="./style/nouislider.css" type="text/css" media="screen" />
+  <!-- font for labels -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dosis&family=Mohave&family=Truculenta:opsz,wght@12..72,300&display=swap"
+    rel="stylesheet" />
+  <!-- end of font for labels -->
+  <!-- button icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- end of button icons -->
+</head>
+
+<div id="main-wrapper">
+  <div id="sidebar">
+    <h1>
+      <div id="main-title">Follow the Lives of <span id="num-students">&nbsp;</span>
+        <div id="cohort-type">&nbsp;</div>
+      </div>
+    </h1>
+    <h5>
+      <div id="author"> by <a href="mailto:ksmit258@msudenver.edu" style="color: #26a9bb">Kelsey Smith</a></div>
+    </h5>
+    <h3>
+      <p>
+        This visualization depicts the “zig-zaggy” lives the <span id="cohort-year" style="opacity: 0"></span> cohort
+        of students at MSU Denver took over the course of ten years, semester by semester.
+      </p>
+      <p>
+        Hover over "Hiatus", “Graduated”, “Transferred Out”, or “Dropped Out” to read more about the definition
+        behind those terms.
+        Pause the animation at any time to digest what is occurring, and use the faster and slower buttons to increase
+        and decrease the animation speed.
+        Utilize the slider bookends for selecting desired ranges of time to loop over.
+      </p>
+      <p>
+        Note that for cohorts closer to the present, the calculation behind students who "drop out" becomes more
+        unreliable,
+        as
+        insufficient time has elapsed to know whether students are potentially just on hiatus, or have transferred out.
+      </p>
+      <p>Select from the filters below and click 'Apply' to reload the animation at any time.</p>
+    </h3><br><br>
+    <div id="filter-container">
+      <!-- Row 1 -->
+      <div class="filter-headers">Cohort</div>
+      <div class="grid-spacer"></div>
+      <div class="filter-headers">Student Type</div>
+      <!-- Row 2 -->
+      <select id="select-cohort" class="drop-down-menu">
+        <option value="201150">Fall 2011</option>
+        <option value="201250">Fall 2012</option>
+        <option value="201350">Fall 2013</option>
+        <option value="201450">Fall 2014</option>
+        <option value="201550">Fall 2015</option>
+        <option value="201650">Fall 2016</option>
+        <option value="201750">Fall 2017</option>
+        <option value="201850">Fall 2018</option>
+      </select>
+      <div class="grid-spacer"></div>
+      <select id="select-student-type" class="drop-down-menu">
+        <option value="ftf">First-Time Freshman</option>
+        <option value="trans">Transfer Students</option>
+      </select>
+      <!-- Row 3 -->
+      <div class="filter-headers">Time Status</div>
+      <div class="grid-spacer"></div>
+      <div class="filter-headers">Sex</div>
+      <!-- Row 4 -->
+      <select id="select-time-status" class="drop-down-menu">
+        <option value="All">All</option>
+        <option value="UG Full-Time">Full-Time</option>
+        <option value="UG Part-Time">Part-Time</option>
+      </select>
+      <div class="grid-spacer"></div>
+      <select id="select-sex" class="drop-down-menu">
+        <option value="All">All</option>
+        <option value="F">Female</option>
+        <option value="M">Male</option>
+      </select>
+      <!-- Row 5 -->
+      <div class="filter-headers">Race/Ethnicity</div>
+      <div class="grid-spacer"></div>
+      <div class="filter-headers">First Generation Status</div>
+      <!-- Row 6 -->
+      <select id="select-race-ethnicity" class="drop-down-menu">
+        <option value="All">All</option>
+        <option value="African American">African American</option>
+        <option value="American Indian/Alaskan Native">American Indian/Alaskan Native</option>
+        <option value="Asian">Asian</option>
+        <option value="Hispanic">Hispanic</option>
+        <option value="International Student">International Student</option>
+        <option value="Missing/Unknown">Missing/Unknown</option>
+        <option value="Native Hawaiian/Pacific Islander">Native Hawaiian/Pacific Islander</option>
+        <option value="Two or More Races">Two or More Races</option>
+        <option value="White">White</option>
+      </select>
+      <div class="grid-spacer"></div>
+      <select id="select-first-gen-status" class="drop-down-menu">
+        <option value="All">All</option>
+        <option value="1GY">First Generation Student</option>
+        <option value="1GN">Not First Generation Student</option>
+        <option value="1GX">Unknown First Generation Status</option>
+      </select>
+      <!-- Row 7 -->
+      <div class="filter-headers">College of Starting Major</div>
+      <div class="grid-spacer"></div>
+      <div class="filter-headers"></div>
+      <!-- Row 8 -->
+      <select id="select-college-of-major" class="drop-down-menu">
+        <option value="All">All</option>
+        <option value="College of Business">College of Business</option>
+        <option value="College Health Applied Science">College of Health and Applied Science</option>
+        <option value="College Letters Arts Sciences">College of Letters, Arts, and Sciences</option>
+        <option value="School of Education">School of Education</option>
+        <option value="School of Hospitality">School of Hospitality</option>
+      </select>
+      <div class="grid-spacer"></div>
+      <button class="filter-button" onclick="resetAnimation()">Apply</button>
+      <div class="grid-spacer"></div>
+      <button class="filter-button" onclick="resetDropdowns()">Reset</button>
+    </div>
+    <div class="filter-headers">
+      <p style="color: white; font-size: 14px; width: 210px; margin-left: 250px;">You may
+        need
+        to
+        wait a moment
+        for any changes to take
+        effect after clicking "Apply" or "Reset".</p>
+
+    </div>
+
+    <div id="source">
+      Data pulled directly from MSU Denver's student information system in early 2022, as well as the National Student
+      Clearinghouse. Animation and layout inspiration from
+      <a href="https://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans/" style="color: #26a9bb">Nathan
+        Yau</a>. With grateful assistance from <a href="https://github.com/ddejohn" style="color: #26a9bb">Devon
+        DeJohn</a>.
+      Assembled by Kelsey Smith.
+    </div>
+  </div>
+  <div id="animation-area">
+    <h2 id="yrcount">Year <span class="cnt">1</span></h2>
+    <div class="inline-div">
+      <div id="left-button-container" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0; cursor: pointer">
+        <button id="toggleId" class="material-symbols-outlined" style="font-size: 20px; color: #fbfbee"
+          onclick="togglePlayPause()">play_arrow</button>
+        <button id="reset" class="material-symbols-outlined"
+          style="font-size: 20px; color: #fbfbee">restart_alt</button>
+      </div>
+      <div class="slidecontainer" style="text-align: center">
+        <div id="termSlider"></div>
+      </div>
+      <div id="right-button-container" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0; cursor: pointer">
+        <div class="spd-tooltip">
+          <button id="slower" class="material-symbols-outlined" style="font-size: 20px; color: #fbfbee">
+            fast_rewind
+          </button>
+          <span class="tooltiptext">
+            <h4 id="transition-speed1">Transition Speed: <br><span class="spd"></span> seconds</h4>
+          </span>
+        </div>
+        <div class="spd-tooltip">
+          <button id="faster" class="material-symbols-outlined" style="font-size: 20px; color: #fbfbee">
+            fast_forward
+          </button>
+          <span class="tooltiptext">
+            <h4 id="transition-speed2">Transition Speed: <br><span class="spd"></span> seconds</h4>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id="chart"></div>
+  </div>
+</div>
+
+<script src="./js/nouislider.js" type="text/javascript"></script>
+<script src="./js/d3.v5.min.js" type="text/javascript"></script>
+<script src="./js/filter_functions.js" type="text/javascript"></script>
+<script src="./js/slider_functions.js" type="text/javascript"></script>
+<script src="./js/cohort_time_notes.js" type="text/javascript"></script>
+<script src="./js/moving_bubbles.js" type="text/javascript"></script>
