@@ -70,7 +70,7 @@ p {
 }
 
 .content {
-  width: 700px;
+  width: 700px; /* modify this to % */
   text-align: center;
   margin: 0;
   position: absolute;
