@@ -193,9 +193,6 @@ a.home:active {
 
 /* START: Filter for projects page */
 
-/* This is currently not functional, and I'm not sure it's GOING to be functional with a grid setup.
-Needs more testing. */
-
 #filter-container {
   margin: auto;
   width: 50%;
@@ -253,27 +250,27 @@ Needs more testing. */
   margin-bottom:10px; /* to match column gap */
 }
 
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   #gallery {
-   -moz-column-count:    3;
-   -webkit-column-count: 3;
-   column-count:         3;
+    -webkit-column-count: 3;
+    -moz-column-count:    3;
+    column-count:         3;
   }
 }
 
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   #gallery {
-   -moz-column-count:    2;
-   -webkit-column-count: 2;
-   column-count:         2;
+    -webkit-column-count: 2;
+    -moz-column-count:    2;
+    column-count:         2;
   }
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   #gallery {
-   -moz-column-count:    1;
-   -webkit-column-count: 1;
-   column-count:         1;
+    -webkit-column-count: 1;
+    -moz-column-count:    1;
+    column-count:         1;
   }
 }
 
@@ -310,7 +307,7 @@ Needs more testing. */
   height: 100%;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 20% 10% 70%;
+  grid-template-rows: 15% 10% 70% 5%; /* last row is never used; it's just there as a margin for the text that fades out */
   background-color: #5e676ea1;
   margin-bottom:10px; /* to match column gap */
 }
@@ -319,7 +316,8 @@ Needs more testing. */
   margin-top:20px;
   font-family: 'Barlow Condensed', sans-serif;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 hr.project {
@@ -338,6 +336,8 @@ hr.project {
   width: 80%;
   line-height: 100%;
   word-wrap:break-word;
+  mask-image: none;
+  -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent)
 }
 
 /* END: Project page responsive layout */
