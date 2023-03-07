@@ -1,0 +1,43 @@
+.content {
+    width: 60%; /* modify this to % */
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.fa {
+    padding: 25px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-github {
+    background: #333;
+    color: white;
+  }
+  
+  .fa-envelope {
+    background: #535474;
+    color: white;
+  }
+  
+  .fa-linkedin-in {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-chart-simple {
+    background: #B25068;
+    color: white;
+  }
+  
