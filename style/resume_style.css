@@ -125,12 +125,23 @@ cv-header {
     top: 25px;
     margin:0;
     padding:8px 16px;
-    /* background:rgba(99, 89, 133,1); */
     color:#fff;
     border-radius:5px;
     box-shadow:0 0 0 3px rgba(24, 18, 43,0.3);
   }
   
+  .present-time {
+    position:absolute;
+    top:12px;
+    right:-165px;
+    top: 25px;
+    margin:0;
+    padding:8px 16px;
+    color:#fff;
+    border-radius:5px;
+    box-shadow:0 0 0 3px rgba(24, 18, 43,0.3);
+  }
+
   .timeline ul li:nth-child(even) .time
   {
     position:absolute;
@@ -139,7 +150,6 @@ cv-header {
     top: 25px;
     margin:0;
     padding:8px 16px;
-    /* background:rgba(99, 89, 133,1); */
     color:#fff;
     border-radius: 5px;
     box-shadow:0 0 0 3px rgba(24, 18, 43,0.3);
@@ -156,10 +166,10 @@ cv-header {
       width:100%;
       padding-bottom:0;
     }
-    h1{
+    /* h1{
       font-size:40px;
       text-align:center;
-    }
+    } */
     .timeline:before{
       left:20px;
       height:100%;
@@ -178,12 +188,13 @@ cv-header {
       top:-18px;
       left:16px;
     }
-    .timeline ul li:nth-child(odd) .time,
+    .timeline ul li:nth-child(odd) .time, 
+    .present-time,
     .timeline ul li:nth-child(even) .time{
       top:-30px;
       left:50px;
       right:inherit;
     }
   }
-  
+
   /* END: Resume style */
