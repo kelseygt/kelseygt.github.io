@@ -3,34 +3,19 @@ t {
     font-size: 100px; 
     color: #2C3639;
     white-space: nowrap;
-  }
-
-.container {
-    height: 100%;
-}
-  
-.content {
     text-align: center;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
+    display: block;
+  }
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto repeat(4, minmax(0, 300px)) auto;
 }
 
 .grid-item {
     font-size: 24px;
     text-align: center;
-    margin: 20px 50px;
 }
-  /* END: Containers for the home page */
-
 
 /* START: Link formatting on home page */
 a.home {

@@ -58,14 +58,6 @@ p {
 }
 /* END: Element formatting */
 
-/* START: Child page container */
-/* .sub-page-container {
-  margin: auto;
-  width: 60%;
-  height: 100%;
-} */
-/* END: Child page container */
-
 .sub-page-container {
   display: flex;
   justify-content: center;
@@ -92,7 +84,6 @@ p {
   }
 }
 
-/* START: Elements uniform to all pages */
 .hr {
   width: 60%;
   border: 0;
@@ -105,7 +96,6 @@ p {
     rgba(245, 245, 220, 0)
     );
 }
-/* END: Elements uniform to all pages */
 
 /* START: Navigation bar */
 /* Add a background color to the top navigation */
