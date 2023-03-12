@@ -1,0 +1,45 @@
+t {
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 100px; 
+    color: #2C3639;
+    white-space: nowrap;
+    text-align: center;
+    display: block;
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto repeat(4, minmax(0, 250px)) auto;
+}
+
+.grid-item {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* START: Link formatting on home page */
+a.home {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+a.home:link {
+    color: #2C3639;
+}
+
+/* visited link */
+a.home:visited {
+    color: #2C3639;
+}
+
+/* mouse over link */
+a.home:hover {
+    color: #80558C;
+}
+
+/* selected link */
+a.home:active {
+    color: rgb(21, 99, 122);
+}
+/* END: Link formatting on home page */
