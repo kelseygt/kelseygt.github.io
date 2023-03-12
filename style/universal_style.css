@@ -70,17 +70,18 @@ p {
   width: 60%;
 }
 
-@media screen and (max-width: 600px) {
-  .content {
-      align-self: center;
-      width: 90%;
-  }
-}
-
+/* Order matters here */
 @media screen and (max-width: 1000px) {
   .content {
       align-self: center;
       width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+      align-self: center;
+      width: 90%;
   }
 }
 

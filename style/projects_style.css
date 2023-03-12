@@ -56,6 +56,7 @@
     margin-bottom:10px; /* to match column gap */
   }
   
+  /* Order matters here */
   @media only screen and (max-width: 1200px) {
     #gallery {
       -webkit-column-count: 3;
@@ -114,7 +115,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 15% 10% 70% 5%; /* last row is never used; it's just there as a margin for the text that fades out */
+    grid-template-rows: 15% 10% 70% 5%; /* last row is never used; it's just there as a margin */
     background-color: #5e676ea1;
     margin-bottom:10px; /* to match column gap */
   }
@@ -138,13 +139,12 @@
     text-align: left;
     font-family: 'Barlow Condensed', sans-serif;
     color: white;
-    font-size: 22px;
     height: 100%; /* remove this if you want to vertically center this text */
     width: 80%;
     line-height: 100%;
-    word-wrap:break-word;
+    /* word-wrap:break-word;
     mask-image: none;
-    -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent)
+    -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent) */
   }
   
   /* END: Project page responsive layout */
