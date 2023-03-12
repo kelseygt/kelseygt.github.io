@@ -16,6 +16,7 @@ h1 {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 64px;
   color: rgb(44, 54, 57);
+  margin: 0;
 }
 
 h1, .grid-item, .topnav {
