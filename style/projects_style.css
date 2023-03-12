@@ -57,7 +57,7 @@
   }
   
   /* Order matters here */
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1600px) {
     #gallery {
       -webkit-column-count: 3;
       -moz-column-count:    3;
@@ -65,7 +65,7 @@
     }
   }
   
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1400px) {
     #gallery {
       -webkit-column-count: 2;
       -moz-column-count:    2;
