@@ -73,20 +73,21 @@ p {
 /* Order matters here */
 @media screen and (max-width: 1000px) {
   .content {
-      align-self: center;
-      width: 70%;
+    align-self: center;
+    width: 70%;
   }
 }
 
 @media screen and (max-width: 600px) {
   .content {
-      align-self: center;
-      width: 90%;
+    align-self: center;
+    width: 90%;
   }
 }
 
 .hr {
-  width: 60%;
+  width: 100%;
+  max-width: 1000px;
   border: 0;
   margin: auto;
   height: 3px;

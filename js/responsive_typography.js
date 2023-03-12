@@ -21,6 +21,15 @@ window.addEventListener("resize", function (event) {
         } else if (height >= 350) {
             collection[project].style.fontSize = "24px"
         }
-        console.log(collection[project].style.fontSize)
     };
+})
+
+window.addEventListener("resize", function (event) {
+    let w = window.innerWidth;
+    let size = document.getElementById("skills-list")
+    if (w < 400) {
+        size.style.fontSize = "18px"
+    } else if (w >= 400) {
+        size.style.fontSize = "20px"
+    }
 })

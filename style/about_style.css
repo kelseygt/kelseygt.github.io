@@ -1,0 +1,19 @@
+.about-content {
+    align-self: center;
+    width: 50%;
+  }
+  
+  /* Order matters here */
+  @media screen and (max-width: 1000px) {
+    .about-content {
+        align-self: center;
+        width: 70%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .about-content {
+        align-self: center;
+        width: 90%;
+    }
+  }

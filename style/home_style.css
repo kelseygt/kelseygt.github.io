@@ -9,7 +9,7 @@ t {
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto repeat(4, minmax(0, 300px)) auto;
+    grid-template-columns: auto repeat(4, minmax(0, 250px)) auto;
 }
 
 .grid-item {
