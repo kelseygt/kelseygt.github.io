@@ -61,13 +61,16 @@ p {
 .sub-page-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%;
+  align-items: center; 
+  height: 100vh;
+  position: relative;
+  overflow-y: scroll;
 }
 
 .content {
   align-self: center;
-  width: 60%;
+  width: 50%;
+  margin: auto 0;
 }
 
 /* Order matters here */

@@ -1,6 +1,7 @@
 .about-content {
     align-self: center;
     width: 50%;
+    margin: auto 0;
   }
   
   /* Order matters here */
